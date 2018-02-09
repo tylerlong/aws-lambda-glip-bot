@@ -1,0 +1,34 @@
+{
+  "name": "aws-lambda-glip-bot",
+  "version": "0.1.0",
+  "description": "A demo Glip bot which will be deployed to AWS Lambda",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "upgrade": "yarn-upgrade-all",
+    "build": "webpack --progress --colors",
+    "build:watch": "yarn build --watch",
+    "release": "yarn build -p",
+    "info": "cd messages && serverless info",
+    "log": "cd messages && serverless -f handleMessage logs",
+    "log:stream": "yarn log -t",
+    "remove": "cd messages && serverless remove",
+    "deploy:full": "yarn build && cd messages && serverless deploy",
+    "deploy:full:prod": "yarn release && cd messages && serverless deploy --stage prod",
+    "deploy": "yarn deploy:full function -f handleMessage"
+  },
+  "dependencies": {
+    "ringcentral-js-concise": "^0.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "serverless": "^1.25.0",
+    "standard": "^10.0.3",
+    "webpack": "^3.10.0",
+    "yarn-upgrade-all": "^0.3.0"
+  }
+}
