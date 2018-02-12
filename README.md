@@ -3,8 +3,6 @@
 A demo Glip bot which will be deployed to AWS Lambda
 
 
-
-
 ## Setup
 
 ```
