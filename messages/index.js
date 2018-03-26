@@ -17,7 +17,7 @@ export const handleMessage = (event, context, callback) => {
   if (message && message.creatorId !== token.owner_id) {
     rc.post('/restapi/v1.0/glip/posts', {
       groupId: message.groupId,
-      text: JSON.stringify(message, null, 2),
+      text: 'Hi, I am hosted on AWS Lambda',
       attachments: undefined
     })
   }
