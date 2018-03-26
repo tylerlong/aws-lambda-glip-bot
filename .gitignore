@@ -4,3 +4,5 @@ node_modules/
 .serverless/
 env.yml
 handler.js
+yarn-error.log
+temp.js
